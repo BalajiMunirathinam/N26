@@ -17,25 +17,16 @@
         <name>FlexiPage</name>
     </types>
     <types>
-        <members>Product_Inventory__c</members>
-        <name>CustomObject</name>
-    </types>
-    <types>
-        <members>Contact.Home_Country__c</members>
-        <members>Contact.Language__c</members>
-        <members>Contact.Languages__c</members>
-        <members>Contact.Level__c</members>
-        <members>Contact.Product__c</members>
-        <members>Contact.Survey_date__c</members>
-        <name>CustomField</name>
-    </types>
-    <types>
         <members>Contact.Product_Details</members>
         <name>QuickAction</name>
     </types>
     <types>
         <members>*</members>
         <name>CustomTab</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>CustomObject</name>
     </types>
     <version>38.0</version>
 </Package>
