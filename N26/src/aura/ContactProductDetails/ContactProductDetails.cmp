@@ -1,0 +1,54 @@
+<aura:component controller="ProductsController" implements="flexipage:availableForRecordHome,force:lightningQuickActionWithoutHeader,force:hasRecordId">
+	<aura:handler name="init" value="{!this}" action="{!c.addSelected}" />
+    <aura:attribute name="ChildRecordList" type="List" />
+    <div class="slds-scrollable_x" style="height:8rem; width: 54rem;">
+    <table class="slds-table slds-table--bordered slds-table--cell-buffer">
+    <thead>
+        <tr class="slds-text-title--caps">
+            <th scope="col">
+                <div class="slds-truncate" title="Name">Name</div>
+            </th>
+            <th scope="col">
+                <div class="slds-truncate" title="Product Type">Product Type</div>
+            </th>
+            <th scope="col">
+                <div class="slds-truncate" title="Cost per Calendar Month">Cost per Calendar Month</div>
+            </th>
+			<th scope="col">
+                <div class="slds-truncate" title="ATM Fee in other currencies">ATM Fee in other currencies</div>
+            </th>
+			<th scope="col">
+                <div class="slds-truncate" title="Card Replacement Cost">Card Replacement Cost</div>
+            </th>
+			<th scope="col">
+                <div class="slds-truncate" title="Country">Country</div>
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <aura:iteration items="{!v.ChildRecordList}" var="prod">
+            <tr>
+                <th scope="row" data-label="Name">
+                    <div class="slds-truncate" title="{!prod.Name }">{!prod.Name}</div>
+                </th>
+                <td data-label="Product Type">
+                    <div class="slds-truncate" title="{!prod.Product_Type__c }">{!prod.Product_Type__c }</div>
+                </td>
+                <td data-label="Cost per Calendar Month">
+                    <div class="slds-truncate" title="{!prod.Cost_per_Calendar_Month__c }">{!prod.Cost_per_Calendar_Month__c}</div>
+                </td>
+				<td data-label="ATM Fee in other currencies">
+                    <div class="slds-truncate" title="{!prod.ATM_Fee_in_other_currencies__c}">{!prod.ATM_Fee_in_other_currencies__c}</div>
+                </td>
+				<td data-label="Card Replacement Cost">
+                    <div class="slds-truncate" title="{!prod.Card_Replacement_Cost__c }">{!prod.Card_Replacement_Cost__c }</div>
+                </td>
+				<td data-label="Country">
+                    <div class="slds-truncate" title="{!prod.Country__c }">{!prod.Country__c}</div>
+                </td>
+            </tr>
+        </aura:iteration>
+    </tbody>
+</table>
+</div>
+</aura:component>
